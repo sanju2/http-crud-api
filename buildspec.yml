@@ -3,11 +3,10 @@ phases:
   install:
     commands:
       - echo "Installing dependencies..."
-      - yum install zip -y
   build:
     commands:
       - echo "Zipping deployment package...".
-      - zip -g build.zip index.js
+      - zip -r build.zip .
   post_build:
     commands:
       - echo "Updating lambda Function..."
